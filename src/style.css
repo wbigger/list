@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+h1 {
+  font-family: 'Righteous', cursive;
+}
+
+#form {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  
+  width: fit-content;
+  height: 140px;
+
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+
+  font-family: 'Righteous', cursive;
+}
+
+#form input, #form select{
+  font-family: inherit;
+  padding: 5px;
+
+  border-radius: 5px;
+  border: inherit;
+}
+
+#form option {
+  color: grey;
+}
+
+#form input:focus, #form select:focus {
+  outline: none;
+}
+
+#form input[type=submit]{
+  place-self: end start;
+  padding: 5px 13px;
+  text-decoration: underline;
+}
+
+.icon {
+  width: 1em;
+  float: right;
+}
+
+#links {
+  width: 30vw; 
+}
