@@ -3,23 +3,26 @@ let sites = [];
 function updateSiteList(listSelector, sites) {
   $(listSelector).empty();
 
-  sites.forEach(site => 
+  sites.forEach(site => {
+    const link = $('<a>')
+      .attr('href', site.url)
+      .text(site.title)
+    const icon = $('<img>')
+      .attr('src', 'assets/delete.png')
+      .attr('alt', 'trash icon')
+      .data('id', site.id)
+      .addClass('icon')
+
     $(listSelector).append(
       $('<li>')
+        .append(link)
         .append(
-          $('<a>')
-            .attr('href', site.url)
-            .text(site.title)
+          $('<div>')
+            .addClass('item')
+            .append(icon)
         )
-        .append(
-          $('<img>')
-            .attr('src', 'assets/delete.png')
-            .attr('alt', 'trash icon')
-            .data('id', site.id)
-            .addClass('icon')
-        )
-    )
-  );
+      );
+  });
 
 };
 

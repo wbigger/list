@@ -46,6 +46,22 @@ h1 {
   float: right;
 }
 
+li {
+  position: relative;
+}
+
+.item {
+  position: absolute;
+  width: 100%;
+  top: 0;
+
+  opacity: 0;
+}
+
+.item:hover {
+  opacity: 1;
+}
+
 #links {
   width: 30vw; 
 }
